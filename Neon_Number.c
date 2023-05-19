@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,k,r,sum=0,s;
+    int n,s,r,sum=0,p;
     scanf("%d",&n);
     s=n*n;
     while(s!=0)
@@ -18,5 +18,4 @@ int main()
     {
         printf("Not Neon Number");
     }
-    
 }
