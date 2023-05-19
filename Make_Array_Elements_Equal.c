@@ -39,6 +39,6 @@ int main ( )
             }
         }
         printf ( "%d" , p ) ;
-        
-    }
+
+}
 }
