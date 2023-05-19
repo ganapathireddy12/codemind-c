@@ -3,8 +3,7 @@ int main()
 {
     int t;
     scanf("%d",&t);
-    
-    for(int i=1;i<=t;i++)
+    while(t--)
     {
         long long int a,b,j;
         scanf("%lld%lld",&a,&b);
@@ -25,5 +24,4 @@ int main()
 ");
         }
     }
-    
 }
