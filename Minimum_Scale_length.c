@@ -30,6 +30,6 @@ int main()
       {
           printf("%d",j);
           break;
-      }
-    }
+}
+}
 }
