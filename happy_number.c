@@ -1,42 +1,25 @@
-#include <stdio.h>
-
-int isHappyNumber(int number)
-{
-    int visited[1000] = {0};  // Array to track visited numbers
-    
-    while (number != 1 && number != 7 && !visited[number])
-    {
-        visited[number] = 1;
-        int sum = 0;
-        
-        while (number > 0)
-        {
-            int digit = number % 10;
-            sum += digit * digit;
-            number /= 10;
-        }
-        
-        number = sum;
+#include <stdio.h> 
+int isHappyNumber(int num){    
+    int rem = 0, sum = 0;    
+    while(num > 0){    
+        rem = num%10;    
+        sum = sum + (rem*rem);    
+        num = num/10;    
+    }    
+    return sum;    
+}     
+int main()    
+{    
+    int num;
+    scanf("%d",&num);
+    int result = num;    
+    while(result != 1 && result != 4)
+	{    
+        result = isHappyNumber(result);    
     }
-    
-    return (number == 1 || number == 7) ? 1 : 0;
-}
-
-int main()
-{
-    int number;
-    scanf("%d", &number);
-    
-    if (isHappyNumber(number))
-    {
-        printf("True
-");
-    }
-    else
-    {
-        printf("False
-");
-    }
-    
-    return 0;
-}
+    if(result == 1)    
+        printf("True");      
+    else if(result == 4)    
+        printf("False");     
+     return 0;    
+}    
