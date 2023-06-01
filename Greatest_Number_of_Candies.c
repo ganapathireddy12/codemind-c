@@ -1,32 +1,33 @@
 #include<stdio.h>
+
 int main()
 {
     int n;
     scanf("%d",&n);
-    int a[n],i,j,c;
-    for(i=0;i<n;i++)
+    int x[n];
+    for(int i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&x[i]);
     }
-    int d;
-    scanf("%d",&d);
-    for(i=0;i<n;i++)
+    int k;
+    scanf("%d",&k);
+    int max=x[0];
+    for(int i=1;i<n;i++)
     {
-        c=0;
-       for(j=0;j<n;j++)
-       {
-           if(a[i]+d>=a[j])
-           {
-               c++;
-           }
-       }
-       if(c==n)
-       {
-           printf("True ");
-       }
-       else
-       {
-           printf("False ");
-       }
+        if(x[i]>max)
+        {
+            max=x[i];
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        if((x[i]+k)>=max)
+        {
+            printf("True ");
+        }
+        else
+        {
+            printf("False ");
+        }
     }
 }
