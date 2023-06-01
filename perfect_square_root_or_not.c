@@ -1,34 +1,22 @@
 #include <stdio.h>
 
-int isPerfectSquare(int number)
-{
-    int root = 0;
+int main() {
+    int n, p, s;
+    scanf("%d", &n);
+    p = 0;
     
-    while (root * root <= number)
-    {
-        if (root * root == number)
-            return 1;
-        root++;
+    while (p * p <= n) {
+        p++;
     }
     
-    return 0;
-}
+    p--;
+    s = p * p;
+    
+    if (s == n) {
+        printf("True");
+    } else {
+        printf("False");
+    }
 
-int main()
-{
-    int number;
-    scanf("%d", &number);
-    
-    if (isPerfectSquare(number))
-    {
-        printf("True
-");
-    }
-    else
-    {
-        printf("False
-");
-    }
-    
     return 0;
 }
