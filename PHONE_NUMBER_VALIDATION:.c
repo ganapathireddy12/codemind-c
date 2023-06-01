@@ -1,41 +1,14 @@
-#include <stdio.h>
-#include <string.h>
-
-int isValidMobileNumber(const char *number)
-{
-    int length = strlen(number);
-    
-    if (number[0] == '0' || length != 10)
-    {
-        return 0;  // Invalid number
-    }
-    
-    for (int i = 0; i < length; i++)
-    {
-        if (number[i] < '0' || number[i] > '9')
-        {
-            return 0;  // Invalid number
-        }
-    }
-    
-    return 1;  // Valid number
-}
-
+	#include<stdio.h>
 int main()
 {
-    char number[11];
-    scanf("%s", number);
-    
-    if (isValidMobileNumber(number))
+   long long int n;
+    scanf("%lld",&n);
+    if(n<=9999999999 && n>1000000000)
     {
-        printf("Valid
-");
+        printf("Valid");
     }
     else
     {
-        printf("Invalid
-");
+        printf("Invalid");
     }
-    
-    return 0;
 }
