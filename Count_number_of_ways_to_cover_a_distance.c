@@ -14,5 +14,5 @@ int main()
     scanf("%d",&n);
     m=cou(n);
     printf("%d",m);
-  return 0;
+   return 0;
 }
