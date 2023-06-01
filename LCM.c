@@ -1,12 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int i,a,b;
-    scanf("%d%d",&a,&b);
-    for(i=1;i<=a*b;i++)
+    int n,m,i=0;
+    scanf("%d%d",&n,&m);
+    while(1)
     {
-        if(i%a==0 && i%b==0)
-        break;
+        i++;
+        if(n*i%m==0)
+        {
+            break;
+        }
     }
-    printf("%d",i);
+    printf("%d",n*i);
 }
