@@ -1,20 +1,14 @@
-#include <stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    int N;
-    scanf("%d", &N);  // Read the number of pairs
-    
-    for (int i = 0; i < N; i++)
+    int t;
+    scanf("%d",&t);
+    while(t--)
     {
-        int num1, num2;
-        scanf("%d%d", &num1, &num2);  // Read each pair of numbers
-        
-        int sum = num1 + num2;  // Calculate the sum
-        
+        int x,y,z;
+        scanf("%d%d",&x,&y);
+        z=x+y;
         printf("%d
-", sum);  // Print the sum on a separate line
+",z);
     }
-    
-    return 0;
 }
