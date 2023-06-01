@@ -23,13 +23,7 @@ int main ( )
         {
             s = s + a [ i ] ;
             t++ ;
-            for(int k=0; k<n; k++)
-            {
-                if ( a [ k ] == a [ i ] )
-                {
-                    a [ k ] = 0 ;
-                }
-            }
+            a[i]=0;
         }
     }
     if ( s > 0 )
@@ -38,6 +32,6 @@ int main ( )
     }
     else
     {
-        printf ( "-1" ) ;
-    }
+        printf ( "-1");
+}
 }
